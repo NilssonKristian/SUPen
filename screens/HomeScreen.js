@@ -24,6 +24,7 @@ export default function HomeScreen({ navigation }) {
             </View>
             <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
             <Text>hej hej</Text>
+            <Text>hej hej hej</Text>
           </View>
         </LinearGradient>
       </View>
