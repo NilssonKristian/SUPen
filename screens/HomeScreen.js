@@ -26,6 +26,8 @@ export default function HomeScreen({ navigation }) {
             <Text>hej hej</Text>
             <Text>hej hej hej</Text>
             <Text>den var ganska stor faktiskt, vågade inte röra den... men ville egentligen</Text>
+            <Text>det här är dejv</Text>
+ 
           </View>
         </LinearGradient>
       </View>
