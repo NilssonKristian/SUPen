@@ -23,6 +23,7 @@ export default function HomeScreen({ navigation }) {
               <Button style={styles.button} title='Logga in med ORU-konto' color='white' />
             </View>
             <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
+            <Text>hej hej</Text>
           </View>
         </LinearGradient>
       </View>
