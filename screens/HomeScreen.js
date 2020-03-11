@@ -13,7 +13,7 @@ export default function HomeScreen({ navigation }) {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
             <Text>TJEJsijeiajsiejasijeias</Text>
-            <Text>hejsanSvejsan</Text>
+            <Text>hejsanSvejsanDAvey</Text>
           </View>
           <View style={styles.buttonContainer}>
             <View style={styles.facebookLogInButton}>
