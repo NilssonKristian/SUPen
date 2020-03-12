@@ -12,8 +12,6 @@ export default function HomeScreen({ navigation }) {
           </View>
           <View style={styles.textContainer}>
             <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
-            <Text>TJEJsijeiajsiejasijeias</Text>
-            <Text>hejsanSvejsanDAvey</Text>
           </View>
           <View style={styles.buttonContainer}>
             <View style={styles.facebookLogInButton}>
@@ -23,11 +21,6 @@ export default function HomeScreen({ navigation }) {
               <Button style={styles.button} title='Logga in med ORU-konto' color='white' />
             </View>
             <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
-            <Text>hej hej</Text>
-            <Text>hej hej hej</Text>
-            <Text>den var ganska stor faktiskt, vågade inte röra den... men ville egentligen</Text>
-            <Text>det här är dejv</Text>
- 
           </View>
         </LinearGradient>
       </View>
