@@ -16,7 +16,7 @@ function App() {
       <Stack.Navigator screenOptions={{
         headerStyle: { backgroundColor: '#184A73' },
         headerTitleStyle: {
-          fontSize: 40,
+          fontSize: 35,
           color: '#76AAD2',
           shadowColor: 'black',
           shadowOffset: { width: 5, height: 0 },

@@ -5,43 +5,39 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function HomeScreen({ navigation }) {
   return (
-
-    <View>
-      <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#57C9A9']}>
-        <View style={styles.imageContainer}>
-          <Image style={styles.image} source={require('../assets/Orebro_universitet_symbol.png')} />
-        </View>
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
-        </View>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity>
-            <View style={styles.button}>
-              <Button title='Logga in med Facebook' />
-            </View>
-            <View style={styles.button}>
-              <Button title='Logga in med ORU-konto' />
-            </View>
-            <View style={styles.button}>
-              <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
-            </View>
-          </TouchableOpacity>
-        </View>
-
-      </LinearGradient>
-    </View>
+    <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#57C9A9']}>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={require('../assets/Orebro_universitet_symbol.png')} />
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity>
+          <View style={styles.button}>
+            <Button title='Logga in med Facebook' />
+          </View>
+          <View style={styles.button}>
+            <Button title='Logga in med ORU-konto' />
+          </View>
+          <View style={styles.button}>
+            <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
+          </View>
+        </TouchableOpacity>
+      </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   imageContainer: {
+    marginTop: 40,
     alignItems: 'center',
     justifyContent: 'center'
   },
   image: {
     height: 200,
     width: 200,
-    marginTop: 50,
     shadowColor: 'black',
     shadowOffset: { width: 5, height: 0 },
     shadowOpacity: 0.6
@@ -53,6 +49,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 30,
     fontSize: 35,
+    fontFamily: 'Arial',
     color: 'white',
     shadowColor: 'black',
     shadowOffset: { width: 5, height: 0 },
@@ -67,6 +64,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 15,
+    fontSize: 20,
     shadowColor: 'black',
     shadowOffset: { width: 5, height: 0 },
     shadowOpacity: 0.5
