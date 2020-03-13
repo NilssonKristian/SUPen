@@ -1,10 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function HomeScreen({ navigation }) {
   return (
+
     <View>
       <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#57C9A9']}>
         <View style={styles.imageContainer}>
@@ -14,15 +15,19 @@ export default function HomeScreen({ navigation }) {
           <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
         </View>
         <View style={styles.buttonContainer}>
-          <View style={styles.facebookLogInButton}>
-            <Button title='Logga in med Facebook' color='white' />
-          </View>
-          <View style={styles.ORULogInButton}>
-            <Button style={styles.button} title='Logga in med ORU-konto' color='white' />
-          </View>
-          <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
+          <TouchableOpacity>
+            <View style={styles.button}>
+              <Button title='Logga in med Facebook' />
+            </View>
+            <View style={styles.button}>
+              <Button title='Logga in med ORU-konto' />
+            </View>
+            <View style={styles.button}>
+              <Button title='Gå till registrering' onPress={() => { navigation.navigate('Register', { itemId: 86, }); }} />
+            </View>
+          </TouchableOpacity>
         </View>
-        <Text>Testar origin master</Text>
+
       </LinearGradient>
     </View>
   );
@@ -58,7 +63,13 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginTop: 30,
-    alignItems: 'center',
+    alignItems: 'center'
+  },
+  button: {
+    marginTop: 15,
+    shadowColor: 'black',
+    shadowOffset: { width: 5, height: 0 },
+    shadowOpacity: 0.5
   },
   facebookLogInButton: {
     backgroundColor: '#3366ff',

@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from './screens/HomeScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import SettingsScreen from './screens/SettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ function App() {
         {/* initialParams={{ itemId: 42 }} kan användas för att sätta en initial parameter till en navigation  */}
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Schoolio' }} />
         <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Registrering' }} />
+        <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: 'Inställningar' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
