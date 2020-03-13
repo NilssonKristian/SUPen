@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     button: {
+        fontSize: 20,
         marginTop: 30,
         width: 210,
         shadowColor: 'black',
