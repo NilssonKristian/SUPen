@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 30,
     fontSize: 35,
-    fontFamily: 'Arial',
     color: 'white',
     shadowColor: 'black',
     shadowOffset: { width: 5, height: 0 },
