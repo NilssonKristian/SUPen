@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import RegisterPicker from '../components/RegisterPicker.js';
+import DropdownPicker from '../components/MaterialDropdown.js';
 
 export default function RegisterScreen({ navigation }) {
   return (
@@ -17,7 +17,8 @@ export default function RegisterScreen({ navigation }) {
         </View>
       </View>
       <View style={styles.pickerContainer}>
-        <RegisterPicker />
+        {/* <RegisterPicker /> */}
+        <DropdownPicker></DropdownPicker>
       </View>
     </LinearGradient>
   );
