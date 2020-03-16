@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
 
-export default class DropdownPicker extends Component {
+export default class SectionDropdownPicker extends Component {
     render() {
         let data = [{
             value: 'Corax',
@@ -26,7 +26,7 @@ export default class DropdownPicker extends Component {
 
         return (
             <Dropdown
-                label='Välj den sektion du tillhör'
+                label='Välj den sektion du tillhör:'
                 data={data}
                 pickerStyle={{
                     height: 380, alignItems: 'center', backgroundColor: '#bfbfbf', shadowColor: 'black',
@@ -36,13 +36,12 @@ export default class DropdownPicker extends Component {
 
             />
         );
-
     }
 }
 
 const styles = StyleSheet.create({
     dropdown: {
         width: '80%',
-        height: 200
+        height: 1
     }
 });

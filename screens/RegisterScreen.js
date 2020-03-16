@@ -3,7 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import DropdownPicker from '../components/MaterialDropdown.js';
+import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
+import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js'
 
 export default function RegisterScreen({ navigation }) {
   return (
@@ -16,10 +17,8 @@ export default function RegisterScreen({ navigation }) {
           <Button title="Gå till inställningar" onPress={() => navigation.navigate('Settings')} />
         </View>
       </View>
-      <View style={styles.pickerContainer}>
-        {/* <RegisterPicker /> */}
-        <DropdownPicker></DropdownPicker>
-      </View>
+        <SectionDropdownPicker />
+        <ProgrammeDropdownPicker style={styles.programmeDropdown} />
     </LinearGradient>
   );
 }
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 5, height: 0 },
     shadowOpacity: 0.5
   },
-  pickerContainer: {
-    borderBottomColor: 'black'
-  }
+programmeDropdown:{
+  marginTop: 20
+}
 })
