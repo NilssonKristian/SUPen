@@ -4,9 +4,9 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from './screens/HomeScreen';
-import RegisterScreen from './screens/RegisterScreen';
-import SettingsScreen from './screens/SettingsScreen';
+import HomeScreen from './screens/HomeScreen.js';
+import RegisterScreen from './screens/RegisterScreen.js';
+import SettingsScreen from './screens/SettingsScreen.js';
 
 const Stack = createStackNavigator();
 
