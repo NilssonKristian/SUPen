@@ -14,14 +14,14 @@ export default function SettingsScreen({ navigation }) {
                     <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.navigate('Home')} />
                 </View>
             </View>
-            <View>
+            <View style={styles.dropdownContainer}>
                 <Text style={styles.text}>Ändra din sektion:</Text>
+                <SectionDropdownPicker />
             </View>
-            <SectionDropdownPicker />
-            <View>
+            <View style={styles.dropdownContainer}>
                 <Text style={styles.text}>Ändra ditt program:</Text>
+                <ProgrammeDropdownPicker />
             </View>
-            <ProgrammeDropdownPicker style={styles.programmeDropdown} />
             <View style={styles.button}>
                 <Button title='Forumsprenumerationer' />
             </View>
@@ -40,14 +40,19 @@ const styles = StyleSheet.create({
     },
     button: {
         fontSize: 20,
-        marginTop: 10,
-        marginBottom: 20,
         width: 210,
+        marginTop: 40,
         shadowColor: 'black',
         shadowOffset: { width: 5, height: 0 },
         shadowOpacity: 0.5
     },
     text: {
         fontSize: 20
+    },
+    container: {
+        width: '80%'
+    },
+    dropdownContainer: {
+        marginTop: 60
     }
 })
