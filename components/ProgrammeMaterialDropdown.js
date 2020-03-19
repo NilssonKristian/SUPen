@@ -23,7 +23,6 @@ export default class SectionDropdownPicker extends Component {
                     shadowOffset: { width: 5, height: 0 },
                     shadowOpacity: 0.6
                 }}
-
             />
         );
     }
