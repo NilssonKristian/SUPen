@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Platform, StatusBar, StyleSheet } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from "expo";
 // import AppNavigator from "./navigation/AppNavigator";
-import { Stitch, AnonymousCredential } from "mongodb-stitch-react-native-sdk";
+// import { Stitch, AnonymousCredential } from "mongodb-stitch-react-native-sdk";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
