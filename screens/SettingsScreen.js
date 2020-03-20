@@ -8,7 +8,7 @@ import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js'
 
 export default function SettingsScreen({ navigation }) {
     return (
-        <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#57C9A9']}>
+        <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
             <View style={styles.buttonContainer}>
                 <View style={styles.button}>
                     <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.navigate('Home')} />
