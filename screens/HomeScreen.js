@@ -12,7 +12,7 @@ export default function HomeScreen({ navigation }) {
         <Image style={styles.image} source={require('../assets/Orebro_universitet_symbol.png')} />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>Välkommen till!{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
+        <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
       </View>
       <View style={styles.buttonContainer}>
         <UniformButton  insertText='Logga in med facebook'/>
