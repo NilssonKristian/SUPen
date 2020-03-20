@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
-import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js'
+import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js';
 
 export default function RegisterScreen({ navigation }) {
   return (
