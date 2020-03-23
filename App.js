@@ -6,8 +6,8 @@ import { AppLoading, Asset, Font, Icon } from "expo";
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen.js';
 
+import HomeScreen from './screens/HomeScreen.js';
 import RegisterScreen from './screens/RegisterScreen.js';
 import SettingsScreen from './screens/SettingsScreen.js';
 
