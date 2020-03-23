@@ -9,7 +9,7 @@ export default function HomeScreen({ navigation }) {
   return (
     <LinearGradient style={styles.linearGradient} colors={['0E6888', '#4E83A2', '#011117']}>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={require('../assets/Orebro_universitet_symbol.png')} />
+        <Image source={require('../assets/oruLogga.png')} />
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
@@ -29,13 +29,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  image: {
-    height: 200,
-    width: 200,
-    shadowColor: 'black',
-    shadowOffset: { width: 5, height: 0 },
-    shadowOpacity: 0.6
-  },
+ 
   textContainer: {
     alignItems: 'center',
     justifyContent: 'center'
