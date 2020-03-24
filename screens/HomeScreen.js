@@ -4,10 +4,13 @@ import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-n
 import { LinearGradient } from 'expo-linear-gradient';
 
 import UniformButton from '../components/UniformButton.js';
+import Footer from '../components/Footer.js';
 
 export default function HomeScreen({ navigation }) {
   return (
+    
     <LinearGradient style={styles.linearGradient} colors={['0E6888', '#4E83A2', '#011117']}>
+      
       <View style={styles.imageContainer}>
         <Image source={require('../assets/oruLogga.png')} />
       </View>
@@ -19,7 +22,11 @@ export default function HomeScreen({ navigation }) {
         <UniformButton  insertText='Logga in med oru'/>
         <UniformButton handlePress={() => {navigation.navigate('Register')}} insertText='Gå till registrering'/>
       </View>
+      <View style={styles.footer}>
+        <Footer messageFunction={() => {navigation.navigate('Register')}}/>
+      </View>
     </LinearGradient>
+       
   );
 }
 
@@ -43,7 +50,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5
   },
   linearGradient: {
-    height: '100%'
+    height: '100%',
+    flex:1,
+    justifyContent:'space-between' 
   }, 
   
   buttonContainer: {
@@ -71,5 +80,9 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOffset: { width: 5, height: 0 },
     shadowOpacity: 0.5
+  },
+  footer: {
+    height:50
+    
   }
 });
