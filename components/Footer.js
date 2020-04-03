@@ -36,9 +36,6 @@ const styles = StyleSheet.create ({
         flexDirection: "row",
         backgroundColor: '#184A73',
         height:35,
-        shadowColor: 'black',
-        shadowOffset: { width: 5, height: 0 },
-        shadowOpacity: 0.8,
         justifyContent:'space-between'
     },
     footerHome:{

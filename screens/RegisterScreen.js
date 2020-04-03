@@ -8,13 +8,13 @@ import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js'
 
 export default function RegisterScreen({ navigation }) {
   return (
-    <LinearGradient style={styles.linearGradient} colors={['0E6888', '#4E83A2', '#011117']}>
+    <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
       <View style={styles.buttonContainer}>
         <View style={styles.button}>
           <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.goBack()} />
         </View>
         <View style={styles.button}>
-          <Button title="Gå till inställningar" onPress={() => navigation.navigate('Settings')} />
+          <Button title="Gå till inställningar" onPress={() => navigation.navigate('SettingsScreen')} />
         </View>
       </View>
         <SectionDropdownPicker />

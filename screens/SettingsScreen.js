@@ -4,14 +4,15 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
-import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js'
+import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js';
+import Footer from '../components/Footer.js';
 
 export default function SettingsScreen({ navigation }) {
     return (
         <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
             <View style={styles.buttonContainer}>
                 <View style={styles.button}>
-                    <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.navigate('Home')} />
+                    <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.navigate('HomeScreen')} />
                 </View>
             </View>
             <View style={styles.dropdownContainer}>
@@ -22,8 +23,8 @@ export default function SettingsScreen({ navigation }) {
                 <Text style={styles.text}>Ändra ditt program:</Text>
                 <ProgrammeDropdownPicker />
             </View>
-            <View style={styles.button}>
-                <Button title='Forumsprenumerationer' />
+            <View style={styles.footer}>
+                <Footer />
             </View>
         </LinearGradient>
     );
@@ -31,7 +32,9 @@ export default function SettingsScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     linearGradient: {
-        height: '100%'
+        height: '100%',
+        flex:1,
+        justifyContent:'space-between'
     },
     buttonContainer: {
         marginTop: 50,
@@ -54,5 +57,9 @@ const styles = StyleSheet.create({
     },
     dropdownContainer: {
         marginTop: 60
+    },
+    footer: {
+        height:50
+        
     }
 })
