@@ -8,9 +8,9 @@ import UniformButton from '../components/UniformButton.js';
 
 export default function HomeScreen({ navigation }) {
   return (
-    
+
     <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
-      
+
       <View style={styles.imageContainer}>
         <Image source={require('../assets/oruLogga.png')} />
       </View>
@@ -18,24 +18,25 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <UniformButton  insertText='Logga in med facebook'/>
-        <UniformButton  insertText='Logga in med oru'/>
-        <UniformButton handlePress={() => {navigation.navigate('RegisterScreen')}} insertText='Gå till registrering'/>
+        <UniformButton insertText='Logga in med facebook' />
+        <UniformButton insertText='Logga in med oru' />
+        <UniformButton handlePress={() => { navigation.navigate('RegisterScreen') }} insertText='Gå till registrering' />
       </View>
       <View style={styles.footer}>
       </View>
     </LinearGradient>
-       
+
   );
 }
 
+// Designen av elementen inom denna fil. Skapas med metoden StyleSheet.create
 const styles = StyleSheet.create({
   imageContainer: {
     marginTop: 40,
     alignItems: 'center',
     justifyContent: 'center'
   },
- 
+
   textContainer: {
     alignItems: 'center',
     justifyContent: 'center'
@@ -50,10 +51,10 @@ const styles = StyleSheet.create({
   },
   linearGradient: {
     height: '100%',
-    flex:1,
-    justifyContent:'space-between' 
-  }, 
-  
+    flex: 1,
+    justifyContent: 'space-between'
+  },
+
   buttonContainer: {
     marginTop: 30,
     alignItems: 'center'
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5
   },
   footer: {
-    height:50
-    
+    height: 50
+
   }
 });
