@@ -30,11 +30,12 @@ export default function SettingsScreen({ navigation }) {
     );
 }
 
+// Designen av elementen inom denna fil. Skapas med metoden StyleSheet.create
 const styles = StyleSheet.create({
     linearGradient: {
         height: '100%',
-        flex:1,
-        justifyContent:'space-between'
+        flex: 1,
+        justifyContent: 'space-between'
     },
     buttonContainer: {
         marginTop: 50,
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
         marginTop: 60
     },
     footer: {
-        height:50
-        
+        height: 50
+
     }
 })

@@ -20,11 +20,12 @@ export default function RegisterScreen({ navigation }) {
       <TouchableOpacity onPress={this.saveUser}>
         <SectionDropdownPicker />
         <ProgrammeDropdownPicker style={styles.programmeDropdown} />
-        </TouchableOpacity>
+      </TouchableOpacity>
     </LinearGradient>
   );
 }
 
+// Designen av elementen inom denna fil. Skapas med metoden StyleSheet.create
 const styles = StyleSheet.create({
   linearGradient: {
     height: '100%'
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 5, height: 0 },
     shadowOpacity: 0.5
   },
-programmeDropdown:{
-  marginTop: 20
-}
+  programmeDropdown: {
+    marginTop: 20
+  }
 })
