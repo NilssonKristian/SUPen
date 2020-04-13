@@ -4,6 +4,9 @@
     "slug": "Rn-Sup",
     "privacy": "public",
     "sdkVersion": "36.0.0",
+    "facebookScheme":"fb517567899159230",
+    "facebookDisplayName":"Appen för studenten",
+    "facebookAppId":"517567899159230",
     "platforms": [
       "ios",
       "android",
