@@ -16,8 +16,11 @@ export default function RegisterScreen({ navigation }) {
         <View style={styles.button}>
           <Button title="Gå till inställningar" onPress={() => navigation.navigate('SettingsScreen')} />
         </View>
+        <View style={styles.button}>
+          <Button title='Gå till forum' onPress={() => navigation.navigate('ForumHomeScreen')} />
+        </View>
       </View>
-      <TouchableOpacity onPress={this.saveUser}>
+      <TouchableOpacity>
         <SectionDropdownPicker />
         <ProgrammeDropdownPicker style={styles.programmeDropdown} />
       </TouchableOpacity>

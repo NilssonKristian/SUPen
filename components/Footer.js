@@ -3,7 +3,7 @@ import { StyleSheet, Image, View, TouchableOpacity } from 'react-native';
 
 // En klass för att skapa komponenten footer som sedan används på flera andra sidor.
 // TouchableOpacity gör så att man kan trycka på elementen som finns inom dess taggar.
-export default class Footer extends Component {
+class Footer extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -26,6 +26,8 @@ export default class Footer extends Component {
         );
     }
 }
+
+export default Footer;
 
 // Designen av elementen inom denna fil. Skapas med metoden StyleSheet.create
 const styles = StyleSheet.create({
