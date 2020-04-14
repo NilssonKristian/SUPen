@@ -24,15 +24,22 @@ export default function ForumScreen({ navigation }) {
         <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
             <CreatePost createPost={createPost} />
             <FlatList data={items} renderItem={({ item }) => <PostItem item={item} />} />
-
-
         </LinearGradient>
     );
 }
 
 const styles = StyleSheet.create({
     linearGradient: {
-        height: '100%'
+      height: '100%',
+      flex:1
+    },
+    footer: {
+        height:50,
+        bottom:0,
+        width: '100%',
+        position: 'absolute'
+
     }
+    
 });
 

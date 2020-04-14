@@ -1,17 +1,17 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import SettingsScreen from '../screens/SettingsScreen.js';
+import MessageScreen from '../screens/MessageScreen.js';
 import Header from '../components/Header.js';
 import React from 'react';
 
-// Skapar screens med olika namn som representerar de 'screens' som finns i applikationen.
+// Skapar screens med olika namn som representerar de 'screens' som finns i applikationen. 
 // Skärmarna får sedan 'navigation' medskickat för att kunna navigera mellan skärmarna.
 // En viss titel skickas också med som går att återspegla i headern på varja sida i applikationen.
 const screens = {
-    SettingsScreen: {
-        screen: SettingsScreen,
+    MessageScreen: {
+        screen: MessageScreen,
         navigationOptions: ({ navigation }) => {
             return {
-                headerTitle: () => <Header navigation={navigation} title='Settings' />,
+                headerTitle: () => <Header navigation={navigation} title='Message' />,
             }
         }
     },
@@ -19,14 +19,16 @@ const screens = {
 }
 
 // Skapar en StackNavigator med metoden createStackNavigator. Denna används för att navigera på ett annat vis än med en DrawerNavigator.
-const SettingsStack = createStackNavigator(screens, {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: "#184A73",
-      shadowColor: "transparent",
-      height: 60,
-    },
-  },
+const MessageStack = createStackNavigator(screens, {
+
+    defaultNavigationOptions: {
+
+        headerStyle: {
+            backgroundColor: '#184A73',
+            shadowColor: 'transparent',
+            height: 60
+        },
+    }
 });
 
-export default SettingsStack;
+export default MessageStack; 
