@@ -1,14 +1,15 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, View, Image, Button } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
 import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js';
+import UniformButton from '../components/UniformButton.js';
 
 export default function RegisterScreen({ navigation }) {
   return (
-    <LinearGradient style={styles.linearGradient} colors={['0E6888', '#4E83A2', '#011117']}>
+    <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
       <View style={styles.buttonContainer}>
         <View style={styles.button}>
           <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.goBack()} />
@@ -17,8 +18,11 @@ export default function RegisterScreen({ navigation }) {
           <Button title="Gå till inställningar" onPress={() => navigation.navigate('Settings')} />
         </View>
       </View>
-        <SectionDropdownPicker />
-        <ProgrammeDropdownPicker style={styles.programmeDropdown} />
+      <SectionDropdownPicker />
+      <ProgrammeDropdownPicker style={styles.programmeDropdown} />
+      <View style={styles.finnishButton}>
+        <UniformButton handlePress={() => { navigation.navigate('Forum') }} insertText='Slutför' />
+      </View>
     </LinearGradient>
   );
 }
@@ -40,7 +44,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 5, height: 0 },
     shadowOpacity: 0.5
   },
-programmeDropdown:{
-  marginTop: 20
-}
+  programmeDropdown: {
+    marginTop: 20
+  },
+  finnishButton: {
+    alignItems: 'center',
+    marginTop: 20
+  }
 })

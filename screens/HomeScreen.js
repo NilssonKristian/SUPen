@@ -7,7 +7,7 @@ import UniformButton from '../components/UniformButton.js';
 
 export default function HomeScreen({ navigation }) {
   return (
-    <LinearGradient style={styles.linearGradient} colors={['0E6888', '#4E83A2', '#011117']}>
+    <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
       <View style={styles.imageContainer}>
         <Image source={require('../assets/oruLogga.png')} />
       </View>
