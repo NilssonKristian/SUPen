@@ -3,8 +3,7 @@ import {View, Text} from 'react-native';
 import Footer from '../components/Footer.js';
 import { View } from 'react-native';
 
-export class MessageScreen extends Component {
-    render() {
+const MessageScreen = ({navigation}) =>{
         return (
             <View>
                 <Text>Message Screen!</Text>
@@ -13,6 +12,5 @@ export class MessageScreen extends Component {
             </View>
         )
     }
-}
 
 export default MessageScreen

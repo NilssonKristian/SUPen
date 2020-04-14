@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {View, Text} from 'react-native';
 import Footer from '../components/Footer.js';
 
 
-export class InboxScreen extends Component {
-    render() {
+const InboxScreen = ({navigation}) => {
         return (
             <View>
                 <Text>Inbox Screen</Text>
@@ -13,6 +12,5 @@ export class InboxScreen extends Component {
             </View>
         )
     }
-}
 
 export default InboxScreen
