@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, View, Button } from 'react-native';
+
+import { StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
@@ -15,18 +16,21 @@ export default function RegisterScreen({ navigation }) {
           <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.goBack()} />
         </View>
         <View style={styles.button}>
-          <Button title="Gå till inställningar" onPress={() => navigation.navigate('Settings')} />
+          <Button title="Gå till inställningar" onPress={() => navigation.navigate('SettingsScreen')} />
+        </View>
+        <View style={styles.button}>
+          <Button title='Gå till forum' onPress={() => navigation.navigate('MainScreen')} />
         </View>
       </View>
-      <SectionDropdownPicker />
-      <ProgrammeDropdownPicker style={styles.programmeDropdown} />
-      <View style={styles.finnishButton}>
-        <UniformButton handlePress={() => { navigation.navigate('Forum') }} insertText='Slutför' />
-      </View>
+      <TouchableOpacity>
+        <SectionDropdownPicker />
+        <ProgrammeDropdownPicker style={styles.programmeDropdown} />
+      </TouchableOpacity>
     </LinearGradient>
   );
 }
 
+// Designen av elementen inom denna fil. Skapas med metoden StyleSheet.create
 const styles = StyleSheet.create({
   linearGradient: {
     height: '100%'
@@ -45,10 +49,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5
   },
   programmeDropdown: {
-    marginTop: 20
-  },
-  finnishButton: {
-    alignItems: 'center',
     marginTop: 20
   }
 })

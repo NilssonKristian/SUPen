@@ -4,6 +4,7 @@ import { Dropdown } from 'react-native-material-dropdown';
 
 export default class SectionDropdownPicker extends Component {
     render() {
+        // Lägger till värden som sedan kan renderas i Dropdown längre ned i filen.
         let data = [{
             value: 'Civilekonomprogrammet',
         }, {
@@ -13,7 +14,6 @@ export default class SectionDropdownPicker extends Component {
         }, {
             value: 'Systemvetenskapliga programmet',
         }];
-
         return (
             <Dropdown
                 label='Välj det program du studerar:'
@@ -28,6 +28,7 @@ export default class SectionDropdownPicker extends Component {
     }
 }
 
+// Designen av elementen inom denna fil. Skapas med metoden StyleSheet.create
 const styles = StyleSheet.create({
     dropdown: {
         width: '60%',
