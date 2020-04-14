@@ -22,7 +22,7 @@ export default class UniformButton extends Component {
 const styles = StyleSheet.create({
     button: {
         
-        backgroundColor: '#203F58',
+        backgroundColor: '#3b5998',
         borderColor: 'white',
         borderRadius: 10,
         overflow: 'hidden',
@@ -32,6 +32,5 @@ const styles = StyleSheet.create({
         paddingHorizontal:100,
         width:365,
         height:40
-
     }
 });

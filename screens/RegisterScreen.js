@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, View, Image, Button, TouchableOpacity, alert } from 'react-native';
+import { StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
@@ -17,7 +17,7 @@ export default function RegisterScreen({ navigation }) {
           <Button title="Gå till inställningar" onPress={() => navigation.navigate('SettingsScreen')} />
         </View>
         <View style={styles.button}>
-          <Button title='Gå till forum' onPress={() => navigation.navigate('ForumHomeScreen')} />
+          <Button title='Gå till forum' onPress={() => navigation.navigate('MainScreen')} />
         </View>
       </View>
       <TouchableOpacity>
