@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import {View, Text} from 'react-native';
 import Footer from '../components/Footer.js';
+import { View } from 'react-native';
 
 export class MessageScreen extends Component {
     render() {
         return (
-            <div>
-                <text>Message Screen!</text>
-                <text>Här ska man se en konversation med en eller flera deltagare.</text>
+            <View>
+                <Text>Message Screen!</Text>
+                <Text>Här ska man se en konversation med en eller flera deltagare.</Text>
                 <Footer />
-            </div>
+            </View>
         )
     }
 }
