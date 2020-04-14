@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import SettingsScreen from '../screens/SettingsScreen.js';
+import ForumHomeScreen from '../screens/ForumHomeScreen.js';
 import Header from '../components/Header.js';
 import React from 'react';
 
@@ -7,11 +7,11 @@ import React from 'react';
 // Skärmarna får sedan 'navigation' medskickat för att kunna navigera mellan skärmarna.
 // En viss titel skickas också med som går att återspegla i headern på varja sida i applikationen.
 const screens = {
-    SettingsScreen: {
-        screen: SettingsScreen,
+    ForumHomeScreen: {
+        screen: ForumHomeScreen,
         navigationOptions: ({ navigation }) => {
             return {
-                headerTitle: () => <Header navigation={navigation} title='Settings' />,
+                headerTitle: () => <Header navigation={navigation} title='Forum' />,
             }
         }
     },
@@ -19,7 +19,7 @@ const screens = {
 }
 
 // Skapar en StackNavigator med metoden createStackNavigator. Denna används för att navigera på ett annat vis än med en DrawerNavigator.
-const SettingsStack = createStackNavigator(screens, {
+const ForumHomeStack = createStackNavigator(screens, {
 
     defaultNavigationOptions: {
 
@@ -31,4 +31,4 @@ const SettingsStack = createStackNavigator(screens, {
     }
 });
 
-export default SettingsStack; 
+export default ForumHomeStack; 

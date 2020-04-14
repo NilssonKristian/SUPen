@@ -24,7 +24,9 @@ export default function SettingsScreen({ navigation }) {
                 <ProgrammeDropdownPicker />
             </View>
             <View style={styles.footer}>
-                <Footer />
+                <Footer homeFunction= {() => navigation.navigate('MainScreen')} 
+                messageFunction= {()=> navigation.navigate('InboxScreen')} 
+                settingsFunction={()=> navigation.navigate('SettingsScreen')}/>
             </View>
         </LinearGradient>
     );
@@ -60,7 +62,8 @@ const styles = StyleSheet.create({
         marginTop: 60
     },
     footer: {
-        height: 50
+        height: 50,
+        bottom: 0
 
     }
 })

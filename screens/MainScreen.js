@@ -7,7 +7,7 @@ import Header from '../components/Header.js';
 const MainScreen = ({navigation}) => {
         return (
             <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
-           <Header />
+           
             <View>
                 <View>
                 <Text>Main Screen!</Text>
@@ -15,7 +15,9 @@ const MainScreen = ({navigation}) => {
                 </View>
             </View>
             <View style={styles.footer}>
-                <Footer />
+                <Footer homeFunction= {() => navigation.navigate('MainScreen')} 
+                messageFunction= {()=> navigation.navigate('InboxScreen')} 
+                settingsFunction={()=> navigation.navigate('SettingsScreen')}/>
             </View>
             </LinearGradient>
         );
@@ -29,7 +31,10 @@ const styles = StyleSheet.create({
       flex:1
     },
     footer: {
-        height: 50
+        height:50,
+        bottom:0,
+        width: '100%',
+        position: 'absolute'
 
     }
     
