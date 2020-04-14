@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import SettingsScreen from '../screens/SettingsScreen.js';
+import MainScreen from '../screens/MainScreen.js';
 import Header from '../components/Header.js';
 import React from 'react';
 
@@ -15,6 +16,14 @@ const screens = {
             }
         }
     },
+    MainScreen: {
+        screen: MainScreen,
+        navigationOptions: ({navigation}) =>{
+            return {
+                headerTitle: 'Home'
+            }
+        }
+    }
 }
 
 // Skapar en StackNavigator med metoden createStackNavigator. Denna används för att navigera på ett annat vis än med en DrawerNavigator.

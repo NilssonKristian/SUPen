@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {View, Text} from 'react-native';
 import 'react-native-gesture-handler';
 
 import Footer from '../components/Footer.js';
@@ -6,11 +7,11 @@ import Footer from '../components/Footer.js';
 export class ForumHomeScreen extends Component ({ navigation }) {
     render() {
         return (
-            <div>
-                <text>Forum Home Screen!</text>
-                <text>Här ska man se alla sina forum.</text>
+            <View>
+                <Text>Forum Home Screen!</Text>
+                <Text>Här ska man se alla sina forum.</Text>
                 <Footer />
-            </div>
+            </View>
         )
     }
 }
