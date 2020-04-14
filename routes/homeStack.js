@@ -20,11 +20,8 @@ const screens = {
         screen: RegisterScreen,
         navigationOptions: {
             title: 'Registrering',
-
         }
     }
-
-
 }
 
 // Skapar en StackNavigator med metoden createStackNavigator. Denna används för att navigera på ett annat vis än med en DrawerNavigator.

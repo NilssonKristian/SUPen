@@ -1,8 +1,8 @@
+import 'react-native-gesture-handler';
 import React from 'react'
 import {View, Text, StyleSheet} from 'react-native';
 import Footer from '../components/Footer.js';
 import { LinearGradient } from 'expo-linear-gradient';
-
 
 const InboxScreen = ({navigation}) => {
         return (
@@ -36,3 +36,4 @@ const styles = StyleSheet.create({
     }
     
 });
+

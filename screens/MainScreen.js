@@ -1,13 +1,11 @@
-import React from 'react'
-import Footer from '../components/Footer.js';
-import { View, Text, StyleSheet } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import Header from '../components/Header.js';
+import React from "react";
+import Footer from "../components/Footer.js";
+import { View, Text, StyleSheet } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 const MainScreen = ({navigation}) => {
         return (
             <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
-           
             <View>
                 <View>
                 <Text>Main Screen!</Text>
@@ -37,5 +35,4 @@ const styles = StyleSheet.create({
         position: 'absolute'
 
     }
-    
 });
