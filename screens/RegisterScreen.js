@@ -1,10 +1,12 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+
 import { StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
 import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js';
+import UniformButton from '../components/UniformButton.js';
 
 export default function RegisterScreen({ navigation }) {
   return (
