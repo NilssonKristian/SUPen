@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import Footer from '../components/Footer.js';
-import { View } from 'react-native';
 
 const MessageScreen = ({navigation}) =>{
         return (
@@ -13,4 +12,4 @@ const MessageScreen = ({navigation}) =>{
         )
     }
 
-export default MessageScreen
+export default MessageScreen;
