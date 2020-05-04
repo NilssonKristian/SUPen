@@ -16,11 +16,10 @@ export default function HomeScreen({ navigation }) {
         <Image source={require('../assets/oruLogga.png')} />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>Välkommen till{"\n"}Örebro Universitets{"\n"}Studentapp</Text>
+        <Text style={styles.text}>Välkommen till{"\n"}Örebro universitet</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <UniformButton insertText='Logga in med facebook' />
-        <UniformButton insertText='Logga in med oru' />
+        <UniformButton insertText='Logga in' />
         <UniformButton handlePress={() => { navigation.navigate('RegisterScreen') }} insertText='Gå till registrering' />
       </View>
       <View style={styles.footer}>

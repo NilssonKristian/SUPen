@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 
-import { StyleSheet, View, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
@@ -11,21 +11,13 @@ import UniformButton from '../components/UniformButton.js';
 export default function RegisterScreen({ navigation }) {
   return (
     <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
-      <View style={styles.buttonContainer}>
-        <View style={styles.button}>
-          <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.goBack()} />
-        </View>
-        <View style={styles.button}>
-          <Button title="Gå till inställningar" onPress={() => navigation.navigate('SettingsScreen')} />
-        </View>
-        <View style={styles.button}>
-          <Button title='Gå till forum' onPress={() => navigation.navigate('MainScreen')} />
-        </View>
-      </View>
-      <TouchableOpacity>
+      <View style={styles.dropdownContainer}>
         <SectionDropdownPicker />
         <ProgrammeDropdownPicker style={styles.programmeDropdown} />
-      </TouchableOpacity>
+      </View>
+      <View style={styles.confirmButton}>
+        <UniformButton insertText='Slutför' />
+      </View>
     </LinearGradient>
   );
 }
@@ -35,20 +27,16 @@ const styles = StyleSheet.create({
   linearGradient: {
     height: '100%'
   },
-  buttonContainer: {
-    marginTop: 150,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  button: {
-    fontSize: 20,
-    marginTop: 30,
-    width: 200,
-    shadowColor: 'black',
-    shadowOffset: { width: 5, height: 0 },
-    shadowOpacity: 0.5
-  },
   programmeDropdown: {
     marginTop: 20
-  }
+  },
+  dropdownContainer: {
+    marginTop: 250
+  },
+  confirmButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 100
+}
+
 })
