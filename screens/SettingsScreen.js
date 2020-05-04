@@ -6,27 +6,24 @@ import { LinearGradient } from 'expo-linear-gradient';
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
 import ProgrammeDropdownPicker from '../components/ProgrammeMaterialDropdown.js';
 import Footer from '../components/Footer.js';
+import UniformButton from '../components/UniformButton.js'
 
 export default function SettingsScreen({ navigation }) {
     return (
         <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
-            <View style={styles.buttonContainer}>
-                <View style={styles.button}>
-                    <Button title="Gå tillbaka till förstasidan" onPress={() => navigation.navigate('HomeScreen')} />
-                </View>
-            </View>
             <View style={styles.dropdownContainer}>
                 <Text style={styles.text}>Ändra din sektion:</Text>
                 <SectionDropdownPicker />
-            </View>
-            <View style={styles.dropdownContainer}>
                 <Text style={styles.text}>Ändra ditt program:</Text>
                 <ProgrammeDropdownPicker />
             </View>
+            <View style={styles.logoutButton}>
+                <UniformButton insertText='Logga ut' />
+            </View>
             <View style={styles.footer}>
-                <Footer homeFunction= {() => navigation.navigate('MainScreen')} 
-                messageFunction= {()=> navigation.navigate('InboxScreen')} 
-                settingsFunction={()=> navigation.navigate('SettingsScreen')}/>
+                <Footer homeFunction={() => navigation.navigate('MainScreen')}
+                    messageFunction={() => navigation.navigate('InboxScreen')}
+                    settingsFunction={() => navigation.navigate('SettingsScreen')} />
             </View>
         </LinearGradient>
     );
@@ -59,11 +56,15 @@ const styles = StyleSheet.create({
         width: '80%'
     },
     dropdownContainer: {
-        marginTop: 60
+        marginTop: 250
     },
     footer: {
         height: 50,
         bottom: 0
 
+    },
+    logoutButton: {
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })

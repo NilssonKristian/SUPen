@@ -1,12 +1,12 @@
 import 'react-native-gesture-handler';
 import React, { useState } from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { StyleSheet, FlatList, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 
 import CreatePost from '../components/CreatePost.js';
 import PostItem from '../components/PostItem.js';
-
+import Footer from '../components/Footer.js';
 
 export default function ForumScreen({ navigation }) {
 
@@ -24,6 +24,11 @@ export default function ForumScreen({ navigation }) {
         <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
             <CreatePost createPost={createPost} />
             <FlatList data={items} renderItem={({ item }) => <PostItem item={item} />} />
+            <View style={styles.footer}>
+                <Footer homeFunction= {() => navigation.navigate('MainScreen')} 
+                messageFunction= {()=> navigation.navigate('InboxScreen')} 
+                settingsFunction={()=> navigation.navigate('SettingsScreen')}/>
+            </View>
         </LinearGradient>
     );
 }
