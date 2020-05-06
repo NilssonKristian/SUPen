@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from '../screens/HomeScreen.js';
 import RegisterScreen from '../screens/RegisterScreen.js';
-import Header from '../components/Header.js';
+import LoginHeader from '../components/LoginHeader.js';
 import React from 'react';
 
 // Skapar screens med olika namn som representerar de 'screens' som finns i applikationen. 
@@ -12,14 +12,16 @@ const screens = {
         screen: HomeScreen,
         navigationOptions: ({ navigation }) => {
             return {
-                headerTitle: () => <Header navigation={navigation} title='App-X' />,
+                headerTitle: () => <LoginHeader navigation={navigation} title='App-X' />,
             }
         }
     },
     RegisterScreen: {
         screen: RegisterScreen,
-        navigationOptions: {
-            title: 'Registrering',
+        navigationOptions: ({navigation}) => {
+            return{
+                headerTitle: () => <LoginHeader navigation={navigation} title='Registrering' />,
+            }
         }
     }
 }
