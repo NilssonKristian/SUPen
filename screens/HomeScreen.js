@@ -1,17 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import UniformButton from '../components/UniformButton.js';
-
 
 export default function HomeScreen({ navigation }) {
   return (
 
     <LinearGradient style={styles.linearGradient} colors={['#0E6888', '#4E83A2', '#011117']}>
-
-
       <View style={styles.imageContainer}>
         <Image source={require('../assets/oruLogga.png')} />
       </View>
@@ -25,7 +22,6 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.footer}>
       </View>
     </LinearGradient>
-
   );
 }
 
