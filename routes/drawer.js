@@ -7,15 +7,16 @@ import InboxStack from './inboxStack.js';
 import ForumStack from './forumStack.js';
 import ForumHomeStack from './forumHomeStack.js';
 import MessageStack from './messageStack.js';
+import RegisterStack from './registerStack.js';
 
 // Skapar en Drawernavigation med metoden createDrawerNavigation. Skickar med olika 'stacks' till de 'screens' som finns i applikationen.
 const RootDrawerNavigator = createDrawerNavigator({
     //Home ska tas bort framöver. Vi kan också lägga om ordningen på skärmarna om vi vill det
     Home: {
         screen: HomeStack,
-        //navigationOptions:{
-        // drawerLockMode: 'locked-closed' kommer användas sen så man inte kan öppna hamburgaren på första-sidan
-        // }
+    },
+    Register: {
+        screen: RegisterStack
     },
     Settings: {
         screen: SettingsStack
