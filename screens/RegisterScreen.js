@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionDropdownPicker from '../components/SectionMaterialDropdown.js';
@@ -18,6 +18,7 @@ export default function RegisterScreen({ navigation }) {
       <View style={styles.confirmButton}>
         <UniformButton insertText='Slutför' />
       </View>
+      <Button title='Gå till inloggad sida' onPress={() => navigation.navigate('MainScreen')} />
     </LinearGradient>
   );
 }

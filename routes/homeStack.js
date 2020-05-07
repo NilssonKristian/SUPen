@@ -1,6 +1,5 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from '../screens/HomeScreen.js';
-import RegisterScreen from '../screens/RegisterScreen.js';
 import LoginHeader from '../components/LoginHeader.js';
 import React from 'react';
 
@@ -16,20 +15,10 @@ const screens = {
             }
         }
     },
-    RegisterScreen: {
-        screen: RegisterScreen,
-        navigationOptions: ({navigation}) => {
-            return{
-                headerTitle: () => <LoginHeader navigation={navigation} title='Registrering' />,
-            }
-        }
-    }
 }
-
 // Skapar en StackNavigator med metoden createStackNavigator. Denna används för att navigera på ett annat vis än med en DrawerNavigator.
 const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
-
         headerStyle: {
             backgroundColor: '#184A73',
             shadowColor: 'transparent',
