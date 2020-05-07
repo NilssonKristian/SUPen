@@ -16,9 +16,8 @@ export default function RegisterScreen({ navigation }) {
         <ProgrammeDropdownPicker style={styles.programmeDropdown} />
       </View>
       <View style={styles.confirmButton}>
-        <UniformButton insertText='Slutför' />
+        <UniformButton insertText='Slutför' handlePress={() => navigation.navigate('MainScreen')} />
       </View>
-      <Button title='Gå till inloggad sida' onPress={() => navigation.navigate('MainScreen')} />
     </LinearGradient>
   );
 }
